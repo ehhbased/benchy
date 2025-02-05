@@ -5,9 +5,9 @@
 #include <type_traits>
 
 namespace benchy {
-    namespace utils {
+    namespace utils { // Utility functions
         
-        // Utility functions to generate test data
+        // Generate test data
         template<typename T>
         std::vector<T> generate_random_data(size_t size) {
             std::vector<T> data;
@@ -41,5 +41,5 @@ namespace benchy {
             return data;
         }
 
-    } // namespace utils
-} // namespace benchy
+    }
+}

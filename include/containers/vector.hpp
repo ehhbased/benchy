@@ -111,8 +111,8 @@ namespace shared {
          * @brief Initializer list constructor
          * Constructs vector from list of elements
          */
-        template<class T>
-        vector(std::initializer_list<T> init, deleter_fn<T> custom_deleter = nullptr)
+        template<class U>
+        vector(std::initializer_list<U> init, deleter_fn<T> custom_deleter = nullptr)
             : _size(0), _elements(nullptr), _space(0), _deleter(custom_deleter)
         {
             reserve(init.size());
@@ -242,14 +242,15 @@ namespace shared {
          * @brief Adds element to end (move version)
          * Automatically grows container if needed
          */
-        void push_back(T&& val) {
+        template<class U>
+        void push_back(U&& value) {
             if (_space == 0) {
                 reserve(8);
             }
             else if (_size == _space) {
                 reserve(2 * _space);
             }
-            new (_elements + _size) T(std::move(val));
+            new (_elements + _size) T(std::move(value));
             ++_size;
         }
 
