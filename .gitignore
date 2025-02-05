@@ -1,0 +1,5 @@
+# IDE and editor files
+.vscode/
+
+# Build files
+build/
