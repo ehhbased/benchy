@@ -33,19 +33,19 @@ This experimental project implements and benchmarks custom container classes, fo
 ### Linux
 ```bash
 # Clone the repository with submodules
-git clone https://github.com/yourusername/benchy.git --recursive
+git clone https://github.com/ehhbased/benchy.git --recursive
 cd benchy
 
 # Create build directory and build
-mkdir build && cd build
-cmake ..
+mkdir -p build && cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
 
 ### Windows
 ```bash
 # Clone the repository with submodules
-git clone https://github.com/yourusername/benchy.git --recursive
+git clone https://github.com/ehhbased/benchy.git --recursive
 cd benchy
 
 # Run the build script
